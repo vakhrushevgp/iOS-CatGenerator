@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Texted Cat View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TextedCatViewController" customModule="ConcerteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="SomeClass" customModule="TextedCat">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaq-lC-KHq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gT8-3s-610">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="734"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-ku-tU1">
+                                                <rect key="frame" x="74" y="412" width="245" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="TrN-BE-xOu"/>
+                                                    <constraint firstAttribute="width" constant="245" id="cP1-QK-meT"/>
+                                                    <constraint firstAttribute="width" secondItem="HXQ-ku-tU1" secondAttribute="height" multiplier="7:1" id="mAF-SR-4Pv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Сгенерировать нового кота"/>
+                                                <connections>
+                                                    <action selector="tapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9rH-5a-gAt"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iwD-Fg-Cry">
+                                                <rect key="frame" x="24" y="23.333333333333343" width="345" height="301.33333333333326"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="fJd-2R-pzZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rb-GL-3JR">
+                                                <rect key="frame" x="110" y="348" width="172" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="CFm-8S-x6q"/>
+                                                    <constraint firstAttribute="height" constant="40" id="MQf-yM-Yz2"/>
+                                                    <constraint firstAttribute="width" constant="200" id="Uhi-sQ-J6r"/>
+                                                    <constraint firstAttribute="width" secondItem="7rb-GL-3JR" secondAttribute="height" multiplier="43:10" id="b7q-fh-LWP"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hzP-qJ-UTj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="iwD-Fg-Cry" firstAttribute="top" secondItem="gT8-3s-610" secondAttribute="top" constant="24" id="CNs-f9-kEa"/>
+                                            <constraint firstItem="iwD-Fg-Cry" firstAttribute="leading" secondItem="gT8-3s-610" secondAttribute="leading" constant="24" id="Lbd-Gg-xJg"/>
+                                            <constraint firstItem="HXQ-ku-tU1" firstAttribute="top" secondItem="7rb-GL-3JR" secondAttribute="bottom" constant="24" id="WtQ-wc-Lmg"/>
+                                            <constraint firstItem="7rb-GL-3JR" firstAttribute="top" secondItem="iwD-Fg-Cry" secondAttribute="bottom" constant="24" id="aqy-WW-5sg"/>
+                                            <constraint firstItem="7rb-GL-3JR" firstAttribute="top" secondItem="iwD-Fg-Cry" secondAttribute="bottom" constant="24" id="bsw-AY-d82"/>
+                                            <constraint firstAttribute="trailing" secondItem="iwD-Fg-Cry" secondAttribute="trailing" constant="24" id="h2k-yL-FrR"/>
+                                            <constraint firstItem="HXQ-ku-tU1" firstAttribute="top" secondItem="7rb-GL-3JR" secondAttribute="bottom" constant="24" id="zuu-Fw-BX9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gT8-3s-610" firstAttribute="top" secondItem="HkM-Dt-GLV" secondAttribute="top" id="Jl1-hn-v9w"/>
+                                    <constraint firstItem="gT8-3s-610" firstAttribute="leading" secondItem="HkM-Dt-GLV" secondAttribute="leading" id="KlP-AG-NCl"/>
+                                    <constraint firstItem="gT8-3s-610" firstAttribute="trailing" secondItem="HkM-Dt-GLV" secondAttribute="trailing" constant="393" id="ZWN-86-rQv"/>
+                                    <constraint firstItem="gT8-3s-610" firstAttribute="bottom" secondItem="HkM-Dt-GLV" secondAttribute="bottom" constant="734" id="a0Q-w6-EFy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="HkM-Dt-GLV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QfY-ca-jFM"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="Button" destination="HXQ-ku-tU1" id="HPV-TB-vcu"/>
+                        <outlet property="CatImage" destination="iwD-Fg-Cry" id="LHS-G7-nWC"/>
+                        <outlet property="ScrollView" destination="zaq-lC-KHq" id="w61-3P-i4t"/>
+                        <outlet property="TextInput" destination="7rb-GL-3JR" id="HIe-O0-Naj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
